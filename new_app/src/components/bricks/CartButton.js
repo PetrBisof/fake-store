@@ -50,11 +50,11 @@ let quantityInputClassName = css({
     borderRadius: "4px",
   },
   "::-webkit-outer-spin-button": {
-    webkitAppearance: "none",
+    "-webkit-appearance": "none",
     margin: 0,
   },
   "::-webkit-inner-spin-button": {
-    webkitAppearance: "none",
+    "-webkit-appearance": "none",
     margin: 0,
   },
 });
