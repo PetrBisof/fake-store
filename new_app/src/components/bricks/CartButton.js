@@ -49,8 +49,12 @@ let quantityInputClassName = css({
     outline: "none",
     borderRadius: "4px",
   },
-  "::-webkit-outer-spin-button,::-webkit-inner-spin-button": {
-    webkitAppearance: "none",
+  "::-webkit-outer-spin-button": {
+    "-webkit-appearance": "none",
+    margin: 0,
+  },
+  "::-webkit-inner-spin-button": {
+    "-webkit-appearance": "none",
     margin: 0,
   },
 });

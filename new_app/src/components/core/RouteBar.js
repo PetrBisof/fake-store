@@ -6,6 +6,7 @@ import logo from "../../assets/logo.png";
 import Icon from "@mdi/react";
 import { mdiMenu, mdiCartOutline } from "@mdi/js";
 import CartIcon from "../bricks/CartIcon";
+import { colors } from "../../config/config";
 
 // Define styles using css function from emotion library
 let routeBarClassName = css({
@@ -47,7 +48,7 @@ let menuItemClassName = (isHamburgerMenu) =>
     padding: isHamburgerMenu ? "6px 28px" : "14px 28px",
     backgroundColor: "#e6fce6",
     background: "-webkit-linear-gradient(45deg, #e6fce6, #fafcfa)",
-    color: "#228b22",
+    color: colors.textPrimary,
     ":hover": {
       background: "-webkit-linear-gradient(45deg, #0c592c, #228b22)",
       color: "white",
@@ -95,13 +96,13 @@ function RouteBar() {
       <>
         <NavLink
           className={menuItemClassName()}
-          to="/products"
+          to="/fake-store/products"
           onClick={() => setIsMenuOpened(false)} //Closes meni with links when NavLink is clicked
         >
           <p className={textClassName(isHamburgerMenu)}>Products</p>
         </NavLink>
 
-        <NavLink className={menuItemClassName()} to="/about">
+        <NavLink className={menuItemClassName()} to="/fake-store/about">
           <p className={textClassName(isHamburgerMenu)}>About</p>
         </NavLink>
       </>
@@ -137,7 +138,7 @@ function RouteBar() {
         <span className={sloganClassName}>We are making shopping fake</span>
       )}
       <div className={linksWrapperClassName}>
-        <NavLink to="/cart">
+        <NavLink to="/fake-store/cart">
           <CartIcon
             path={mdiCartOutline}
             className={menuItemClassName()}
