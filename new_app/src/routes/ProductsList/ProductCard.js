@@ -59,7 +59,10 @@ function ProductCard(props) {
         <img src={props.image} className={imageClassName} alt={props.title} />
       </div>
       <div className={textWrapperClassName}>
-        <Link className={titleClassName} to={`/productDetail/${props.id}`}>
+        <Link
+          className={titleClassName}
+          to={`/fake-store/productDetail/${props.id}`}
+        >
           {props.title}
         </Link>
         <p>{formatPrice(props.price)}</p>

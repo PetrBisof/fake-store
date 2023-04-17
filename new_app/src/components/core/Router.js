@@ -13,29 +13,28 @@ function Router() {
   return (
     <div className="Router">
       <Routes>
-        {/* Define route for the cart page */}
-        <Route
-          path="/cart"
-          exact
-          element={<InfoTextIcon {...inProgressProps} />}
-        />
-        {/* Define route for the about page */}
-        <Route
-          path="/about"
-          exact
-          element={<InfoTextIcon {...inProgressProps} />}
-        />
         {/* Define route for the products list page */}
-        <Route path="/products" exact element={<ProductsList />} />
-        {/* Define route for a specific product detail page */}
-        <Route path="/productDetail/:id" element={<ProductDetail />} />
-        {/* Define route for any unknown page */}
-        <Route
-          path="*"
-          element={
-            <InfoTextIcon text="Page not found." icon={mdiEmoticonSadOutline} />
-          }
-        />
+        <Route path="/fake-store">
+          <Route index element={<ProductsList />} />
+          {/* Define route for the cart page */}
+          <Route path="cart" element={<InfoTextIcon {...inProgressProps} />} />
+          {/* Define route for the about page */}
+          <Route path="about" element={<InfoTextIcon {...inProgressProps} />} />
+          {/* Define route for the products list page */}
+          <Route path="products" exact element={<ProductsList />} />
+          {/* Define route for a specific product detail page */}
+          <Route path="productDetail/:id" element={<ProductDetail />} />
+          {/* Define route for any unknown page */}
+          <Route
+            path="*"
+            element={
+              <InfoTextIcon
+                text="Page not found."
+                icon={mdiEmoticonSadOutline}
+              />
+            }
+          />
+        </Route>
       </Routes>
     </div>
   );

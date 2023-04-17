@@ -2,6 +2,7 @@ import { css } from "@emotion/css";
 import { useSelector } from "react-redux";
 import Icon from "@mdi/react";
 import { mdiCartOutline } from "@mdi/js";
+import { colors } from "../../config/config";
 
 let wrapperClassName = css({
   height: 48,
@@ -11,7 +12,7 @@ let wrapperClassName = css({
   padding: "14px 14px",
   backgroundColor: "#e6fce6",
   background: "-webkit-linear-gradient(45deg, #e6fce6, #fafcfa)",
-  color: "#228b22",
+  color: colors.textPrimary,
   position: "relative",
 
   ":hover": {
