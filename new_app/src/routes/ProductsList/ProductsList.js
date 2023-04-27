@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../../redux/reducers/products";
+import { setProducts } from "../../redux/actions/products";
 import { css } from "@emotion/css";
 import ProductCard from "./ProductCard";
 import useFetch from "../../hooks/use-fetch";

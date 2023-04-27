@@ -4,7 +4,7 @@ import {
   addToCart,
   removeFromCart,
   setNewValueToCart,
-} from "../../redux/reducers/cart";
+} from "../../redux/actions/cart";
 import { css, cx } from "@emotion/css";
 import PropTypes from "prop-types";
 
